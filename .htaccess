@@ -1,5 +1,5 @@
 
-# BEGIN WordPress
+# BEGIN WordPresss
 AddHandler application/x-httpd-ea-php70 .php
 <IfModule mod_expires.c>
 	ExpiresActive On
