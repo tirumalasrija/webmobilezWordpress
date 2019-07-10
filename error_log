@@ -1,0 +1,35 @@
+[09-Jul-2019 05:19:44 UTC] PHP Warning:  require(/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php): failed to open stream: No such file or directory in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:44 UTC] PHP Warning:  require(/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php): failed to open stream: No such file or directory in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:44 UTC] PHP Fatal error:  require(): Failed opening required '/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:47 UTC] PHP Warning:  require(/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php): failed to open stream: No such file or directory in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:47 UTC] PHP Warning:  require(/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php): failed to open stream: No such file or directory in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:47 UTC] PHP Fatal error:  require(): Failed opening required '/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:29:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function twentynineteen_post_thumbnail() in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/template-parts/content/content.php:28
+Stack trace:
+#0 /home2/webmobi5/public_html/webmobilez/wp-includes/template.php(724): require()
+#1 /home2/webmobi5/public_html/webmobilez/wp-includes/template.php(671): load_template('/home2/webmobi5...', false)
+#2 /home2/webmobi5/public_html/webmobilez/wp-includes/general-template.php(168): locate_template(Array, true, false)
+#3 /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/index.php(29): get_template_part('template-parts/...')
+#4 /home2/webmobi5/public_html/webmobilez/wp-includes/template-loader.php(78): include('/home2/webmobi5...')
+#5 /home2/webmobi5/public_html/webmobilez/wp-blog-header.php(19): require_once('/home2/webmobi5...')
+#6 /home2/webmobi5/public_html/webmobilez/index.php(17): require('/home2/webmobi5...')
+#7 {main}
+  thrown in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/template-parts/content/content.php on line 28
+[09-Jul-2019 05:31:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function twentynineteen_post_thumbnail() in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/template-parts/content/content.php:28
+Stack trace:
+#0 /home2/webmobi5/public_html/webmobilez/wp-includes/template.php(724): require()
+#1 /home2/webmobi5/public_html/webmobilez/wp-includes/template.php(671): load_template('/home2/webmobi5...', false)
+#2 /home2/webmobi5/public_html/webmobilez/wp-includes/general-template.php(168): locate_template(Array, true, false)
+#3 /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/index.php(29): get_template_part('template-parts/...')
+#4 /home2/webmobi5/public_html/webmobilez/wp-includes/template-loader.php(78): include('/home2/webmobi5...')
+#5 /home2/webmobi5/public_html/webmobilez/wp-blog-header.php(19): require_once('/home2/webmobi5...')
+#6 /home2/webmobi5/public_html/webmobilez/index.php(17): require('/home2/webmobi5...')
+#7 {main}
+  thrown in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/template-parts/content/content.php on line 28
+[09-Jul-2019 05:55:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function footer() in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/front-page.php:521
+Stack trace:
+#0 /home2/webmobi5/public_html/webmobilez/wp-includes/template-loader.php(78): include()
+#1 /home2/webmobi5/public_html/webmobilez/wp-blog-header.php(19): require_once('/home2/webmobi5...')
+#2 /home2/webmobi5/public_html/webmobilez/index.php(17): require('/home2/webmobi5...')
+#3 {main}
+  thrown in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/front-page.php on line 521

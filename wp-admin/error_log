@@ -1,0 +1,24 @@
+[09-Jul-2019 05:18:46 UTC] PHP Warning:  require(/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php): failed to open stream: No such file or directory in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:18:46 UTC] PHP Warning:  require(/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php): failed to open stream: No such file or directory in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:18:46 UTC] PHP Fatal error:  require(): Failed opening required '/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:06 UTC] PHP Warning:  require(/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php): failed to open stream: No such file or directory in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:06 UTC] PHP Warning:  require(/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php): failed to open stream: No such file or directory in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:06 UTC] PHP Fatal error:  require(): Failed opening required '/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:20 UTC] PHP Warning:  require(/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php): failed to open stream: No such file or directory in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:20 UTC] PHP Warning:  require(/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php): failed to open stream: No such file or directory in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:20 UTC] PHP Fatal error:  require(): Failed opening required '/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:27 UTC] PHP Warning:  require(/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php): failed to open stream: No such file or directory in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:27 UTC] PHP Warning:  require(/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php): failed to open stream: No such file or directory in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:19:27 UTC] PHP Fatal error:  require(): Failed opening required '/home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/classes/class-webmobilez-svg-icons.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 260
+[09-Jul-2019 05:24:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function webmobilez_hsl_hex() in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php:138
+Stack trace:
+#0 /home2/webmobi5/public_html/webmobilez/wp-includes/class-wp-hook.php(286): webmobilez_setup('')
+#1 /home2/webmobi5/public_html/webmobilez/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /home2/webmobi5/public_html/webmobilez/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#3 /home2/webmobi5/public_html/webmobilez/wp-settings.php(509): do_action('after_setup_the...')
+#4 /home2/webmobi5/public_html/webmobilez/wp-config.php(82): require_once('/home2/webmobi5...')
+#5 /home2/webmobi5/public_html/webmobilez/wp-load.php(37): require_once('/home2/webmobi5...')
+#6 /home2/webmobi5/public_html/webmobilez/wp-admin/admin.php(34): require_once('/home2/webmobi5...')
+#7 /home2/webmobi5/public_html/webmobilez/wp-admin/customize.php(13): require_once('/home2/webmobi5...')
+#8 {main}
+  thrown in /home2/webmobi5/public_html/webmobilez/wp-content/themes/webmobilez/functions.php on line 138
