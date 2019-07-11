@@ -272,7 +272,7 @@
                                     $j=1;
                                     if($j==1)
                                     {
-                                        $active="show active";
+                                        $active="";
                                     }else
                                     {
                                          $active="";
