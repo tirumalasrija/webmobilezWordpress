@@ -268,9 +268,18 @@
                             </ul>
                             <div class="tab-content developer_tab_content">
 
-                                <?php      foreach($cats as $cat) { $string = strtolower(preg_replace('/\s+/', '', $cat->name));
+                                <?php      foreach($cats as $cat) {
+                                    $j=1;
+                                    if($j==1)
+                                    {
+                                        $active="show active";
+                                    }else
+                                    {
+                                         $active="";
+                                    }
+                                 $string = strtolower(preg_replace('/\s+/', '', $cat->name));
                                 ?>
-                            <div class="tab-pane fade show active " id=<?php echo $string; ?> role="tabpanel" aria-labelledby=<?php echo $string."-tab"; ?>>
+                            <div class="tab-pane fade <?php echo  $active; ?> " id=<?php echo $string; ?> role="tabpanel" aria-labelledby=<?php echo $string."-tab"; ?>>
                                  <ul class="list-unstyled tech_used">
                                     <?php 
 
@@ -305,7 +314,7 @@
                                 
                                 </ul> 
                                 </div>
-                             <?php } ?>
+                             <?php $j++; } ?>
                              
                                
                             </div>
