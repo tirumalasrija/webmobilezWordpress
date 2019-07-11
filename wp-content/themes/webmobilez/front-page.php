@@ -235,7 +235,7 @@
                                    $args = array(
                                                'taxonomy' => 'tech-category',
                                               
-                                               'order'   => 'ASC',
+                                              
                                            );
 
                                    $cats = get_categories($args);
