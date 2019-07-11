@@ -234,7 +234,7 @@
                                    <?php
                                    $args = array(
                                                'taxonomy' => 'tech-category',
-                                               'orderby' => 'name',
+                                              
                                                'order'   => 'ASC',
                                            );
 
