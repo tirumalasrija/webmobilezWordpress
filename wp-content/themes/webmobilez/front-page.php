@@ -253,7 +253,7 @@
                                 ?>
                                 <li class="nav-item">
                                     <?php 
-                                        echo "<a class='$active' id='$string'-tab data-toggle=tab href=#'$string' role=tab aria-controls='$string' aria-selected=false>";
+                                        echo "<a class='$active' id=$string-tab data-toggle=tab href=#$string role=tab aria-controls=$string aria-selected=false>";
                                                            echo $cat->name;
                                                            echo "</a>";
                                                            
@@ -287,7 +287,7 @@
 
                                      $loop = new WP_Query($args);
                                      if($loop->have_posts()) {
-                                        echo '<h2>'.$cat->name.'</h2>';
+                                     
 
                                         while($loop->have_posts()) : $loop->the_post(); 
                                 $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
