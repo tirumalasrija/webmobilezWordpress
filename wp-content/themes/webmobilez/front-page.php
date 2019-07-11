@@ -234,7 +234,8 @@
                                    <?php
                                    $args = array(
                                                'taxonomy' => 'tech-category',
-                                              
+                                              'orderby' => 'count',   // Orders the list by post count
+                                                'order' => 'desc',
                                            );
 
                                    $cats = get_categories($args);
