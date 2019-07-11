@@ -268,11 +268,11 @@
                             </ul>
                             <div class="tab-content developer_tab_content">
 
-                                <?php      foreach($cats as $cat) {
-                                    $j=1;
+                                <?php   $j=1;    foreach($cats as $cat) {
+                                   
                                     if($j==1)
                                     {
-                                        $active="";
+                                        $active="show active";
                                     }else
                                     {
                                          $active="";
