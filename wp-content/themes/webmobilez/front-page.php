@@ -236,6 +236,7 @@
                                                'taxonomy' => 'tech-category',
                                               
                                                'orderby' => 'date',
+                                               'order' =>'desc'
                                            );
 
                                    $cats = get_categories($args);
