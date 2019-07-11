@@ -247,7 +247,7 @@
                                                                $active="active nav-link";
                                                            }else
                                                            {
-                                                              $active="active";
+                                                              $active="nav-link";
                                                            }
                                                          
                                 ?>
