@@ -153,155 +153,95 @@
   
                <section class="partner_logo_area_five" >
             <div class="container">
-                <h2 class="f_size_30 f_600 text-center t_color l_height45 mb_50">Technologies We use</h2>
+                <h2 class="f_size_30 f_600 text-center t_color l_height45 mb_50"><?php echo get_field("technology_title"); ?></h2>
                 <div class="developer_product_content d_product_content_two text-center p-0">
                             <ul class="nav nav-tabs develor_tab mb-30" id="myTab2" role="tablist">
+                                   <?php
+                                   $args = array(
+                                               'taxonomy' => 'tech-category',
+                                              'orderby' => 'count',   // Orders the list by post count
+                                                'order' => 'desc',
+                                           );
+
+                                   $cats = get_categories($args);
+
+                                $i=1;
+                                   foreach($cats as $cat) { $string = strtolower(preg_replace('/\s+/', '', $cat->name));
+                                                           if($i==1)
+                                                           {
+                                                               $active="active nav-link";
+                                                           }else
+                                                           {
+                                                              $active="nav-link";
+                                                           }
+                                                         
+                                ?>
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="ruby-tab" data-toggle="tab" href="#ruby" role="tab" aria-controls="ruby" aria-selected="true">Client Side Options </a>
+                                    <?php 
+                                        echo "<a class='$active' id=$string-tab data-toggle=tab href=#$string role=tab aria-controls=$string aria-selected=false>";
+                                                           echo $cat->name;
+                                                           echo "</a>";
+                                                           
+                                                           ?>
+             
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="curl-tab" data-toggle="tab" href="#curl" role="tab" aria-controls="curl" aria-selected="false"> Server side options</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="resize-tab" data-toggle="tab" href="#resize" role="tab" aria-controls="resize" aria-selected="true">Deployment options</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="doctl-tab" data-toggle="tab" href="#doctl" role="tab" aria-controls="doctl" aria-selected="false">CI/CD options</a>
-                                </li>
+                                                                   
+                                    <?php $i++;
+                                       } ?>
+
+                               
                             </ul>
                             <div class="tab-content developer_tab_content">
-                                <div class="tab-pane fade show active" id="ruby" role="tabpanel" aria-labelledby="ruby-tab">
+
+                                <?php   $j=1;    foreach($cats as $cat) {
+                                   
+                                    if($j==1)
+                                    {
+                                        $active="show active";
+                                    }else
+                                    {
+                                         $active="";
+                                    }
+                                 $string = strtolower(preg_replace('/\s+/', '', $cat->name));
+                                ?>
+                            <div class="tab-pane fade <?php echo  $active; ?> " id=<?php echo $string; ?> role="tabpanel" aria-labelledby=<?php echo $string."-tab"; ?>>
                                  <ul class="list-unstyled tech_used">
-                                    <li class="tech-icon flex-column align-content-center">
+                                    <?php 
+
+
+                                                                      $args = array('post_type' => 'technologies','order'   => 'ASC',
+                                        'tax_query' => array(
+                                            array(
+                                                'taxonomy' => 'tech-category',
+                                                'field' => 'slug',
+                                                'terms' => $cat->slug,
+                                            ),
+                                        ),
+                                     );
+
+                                     $loop = new WP_Query($args);
+                                     if($loop->have_posts()) {
+                                     
+
+                                        while($loop->have_posts()) : $loop->the_post(); 
+                                $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+                                            ?>
+           <li class="tech-icon flex-column align-content-center">
                                         <div>
-                                        <img src="images/html.png" alt="">
-                                         <p>HTML 5</p>
+                                        <img src=<?php echo esc_url($featured_img_url); ?> alt="">
+                                         <p><?php echo get_the_title();?></p>
                                         </div>
                                     </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="https://webmobilez.com/wp-content/uploads/2019/05/css-3.png" alt="">
-                                         <p>CSS 3</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="https://webmobilez.com/wp-content/uploads/2019/05/bootstrap.png" alt="">
-                                         <p>Bootstrap 4</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="https://webmobilez.com/wp-content/uploads/2019/05/angular-1.png" alt="">
-                                         <p>Angular 6</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="https://webmobilez.com/wp-content/uploads/2019/05/react.png" alt="">
-                                         <p>React</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="https://webmobilez.com/wp-content/uploads/2019/05/vue.png" alt="">
-                                         <p>Vue JS</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="https://webmobilez.com/wp-content/uploads/2019/05/protractor.png" alt="">
-                                         <p>Protractor</p>
-                                        </div>
-                                    </li>
-                                      
-                                      <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/wordpress.png" alt="">
-                                         <p>Wordpress</p>
-                                        </div>
-                                    </li>
+            <?php 
+        endwhile;
+     } ?>
+                                    
+                                
                                 </ul> 
                                 </div>
-                                <div class="tab-pane fade" id="curl" role="tabpanel" aria-labelledby="curl-tab">
-                                    <ul class="list-unstyled">
-                                    <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;"  src="https://webmobilez.com/wp-content/uploads/2019/05/spring-boot-project-logo-1-e1535836912198.png" alt="">
-                                         <p>Spring Boot</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/spring.png" alt="">
-                                         <p>Spring Security</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/hibernate1.png" alt="">
-                                         <p>Hibernate</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/mssql.png" alt="">
-                                         <p>MySQL</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/mysql1.png" alt="">
-                                         <p>MSSQL/p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/mongo.png" alt="">
-                                         <p>MongoDB</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/5847eb8bcef1014c0b5e4851.png" alt="">
-                                         <p>CodeIgniter</p>
-                                        </div>
-                                    </li>
-                                </ul>     
-                                </div>
-                                <div class="tab-pane fade" id="resize" role="tabpanel" aria-labelledby="resize-tab">
-                                     <ul class="list-unstyled">
-                                    <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/aws.png" alt="">
-                                         <p>AWS</p>
-                                        </div>
-                                    </li>
-                                    <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="images/azureLogo.png" alt="">
-                                         <p>Azure</p>
-                                        </div>
-                                    </li>
-                                </ul> 
-                                </div>
-                                <div class="tab-pane fade" id="doctl" role="tabpanel" aria-labelledby="doctl-tab">
-                                     <ul class="list-unstyled">
+                             <?php $j++; } ?>
+                             
                                
-                                 <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/jenkins.png" alt="">
-                                         <p>Jenkins</p>
-                                        </div>
-                                    </li>
-                                     <li class="tech-icon flex-column align-content-center">
-                                        <div>
-                                        <img style="height:70px; width:auto;" src="https://webmobilez.com/wp-content/uploads/2019/05/Octicons-mark-github.png" alt="">
-                                         <p>GitHub</p>
-                                        </div>
-                                    </li>
-                                </ul>                                 
-                                </div>
                             </div>
                         </div>
   

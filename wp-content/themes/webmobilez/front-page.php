@@ -112,7 +112,7 @@
                                  <li>CMS Development</li>
                                  <li>eCommerece Solutions</li>
                              </ul>
-                                <a href="webdevelopment.html" class="learn_btn_two">Learn More <i class="ti-arrow-right"></i></a>
+                                <a href="<?php echo site_url("web-development"); ?>" class="learn_btn_two">Learn More <i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-6">
@@ -128,7 +128,7 @@
                                  <li>IOS Development</li>
                                  <li>React Native Devlopment</li>
                              </ul>
-                                <a href="mobiledevelopment.html" class="learn_btn_two">Learn More <i class="ti-arrow-right"></i></a>
+                                <a href="<?php echo site_url("mobile-development"); ?>" class="learn_btn_two">Learn More <i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-6">
@@ -144,7 +144,7 @@
                                  <li>SMO</li>
                                  <li>Conetent Marketing</li>
                              </ul>
-                                <a href="digitalmarketing.html" class="learn_btn_two">Learn More <i class="ti-arrow-right"></i></a>
+                                <a href="<?php echo site_url("digital-marketing"); ?>" class="learn_btn_two">Learn More <i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -228,6 +228,7 @@
        
         <section class="partner_logo_area_five" >
             <div class="container">
+                
                 <h2 class="f_size_30 f_600 text-center t_color l_height45 mb_50"><?php echo get_field("technology_title"); ?></h2>
                 <div class="developer_product_content d_product_content_two text-center p-0">
                             <ul class="nav nav-tabs develor_tab mb-30" id="myTab2" role="tablist">
@@ -314,7 +315,7 @@
                                 
                                 </ul> 
                                 </div>
-                             <?php $j++; } ?>
+                             <?php $j++; }  wp_reset_postdata(); ?>
                              
                                
                             </div>
@@ -325,41 +326,27 @@
             <section class="app_screenshot_area sec_pad" style="background-color:#eee;">
             <div class="container custom_container p0">
                 <div class="sec_title text-center mb_70">
+                    <?php $screens=get_field("mobile_development_screens");
+                        
+                        ?>
                     <h2 class="f_p f_size_30 l_height30 f_700 t_color3 mb_20 wow fadeInUp" data-wow-delay="0.2s">Case Studies of Mobile Development </h2>
                    <!--  <p class="f_400 f_size_16 wow fadeInUp" data-wow-delay="0.4s">Why I say old chap that is spiffing barney, nancy boy bleeder chimney<br> pot richard cheers the little rotter.!</p> -->
                 </div>
                 <div class="app_screen_info">
                     <div class="app_screenshot_slider owl-carousel">
+                        
+                        
+                        <?php foreach($screens as $value){ if(!empty($value)){  ?>
                         <div class="item">
                             <div class="screenshot_img">
-                                 <a href="<?php echo get_template_directory_uri(); ?>/images/App_View.png" class="image-link"><img src="<?php echo get_template_directory_uri(); ?>/images/App_View.png" alt=""></a> 
+                                 <a href="<?php echo $value ?>" class="image-link"><img src="<?php echo $value ?>" alt=""></a> 
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="screenshot_img">
-                                 <a href="<?php echo get_template_directory_uri(); ?>/images/Home.png" class="image-link"><img src="<?php echo get_template_directory_uri(); ?>/images/Home.png" alt=""></a> 
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="screenshot_img">
-                                  <a href="<?php echo get_template_directory_uri(); ?>/images/SignIn.png" class="image-link"><img src="<?php echo get_template_directory_uri(); ?>/images/SignIn.png" alt=""></a> 
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="screenshot_img">
-                             <a href="<?php echo get_template_directory_uri(); ?>/images/progress.png" class="image-link"><img src="<?php echo get_template_directory_uri(); ?>/images/progress.png" alt=""></a>  
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="screenshot_img">
-                                 <a href="<?php echo get_template_directory_uri(); ?>/images/exams.png" class="image-link"><img src="<?php echo get_template_directory_uri(); ?>/images/exams.png" alt=""></a>  
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="screenshot_img">
-                                   <a href="<?php echo get_template_directory_uri(); ?>/images/chating.png" class="image-link"><img src="<?php echo get_template_directory_uri(); ?>/images/chating.png" alt=""></a>
-                            </div>
-                        </div>
+                    
+                     <?php } }  ?>
+                  
+                
+                     
                     </div>
                 </div>
             </div>
@@ -372,36 +359,34 @@
                 </div>
                 <div class="app_screen_info">
                     <div class="app_screenshot_slider owl-carousel">
+                        <?php 
+                        $lastposts = get_posts([
+  'post_type' => 'projects',
+  'post_status' => 'publish',
+  'numberposts' => -1,
+   'order'    => 'ASC'
+]);
+                        if ( $lastposts ) {
+    foreach ( $lastposts as $post ) :
+        setup_postdata( $post ); ?>
+                        
+                        <?php if ( has_post_thumbnail()) {
+   $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
+             
+  ?>
                         <div class="item">
                             <div class="screenshot_img">
-                                 <a href="<?php echo get_template_directory_uri(); ?>/images/bongosAdventure.png" class="image-link"><img src="<?php echo get_template_directory_uri(); ?>/images/bongosAdventure.png" alt=""></a>
+                                 <a href="<?php echo $large_image_url[0]; ?>" class="image-link"><img src="<?php echo $large_image_url[0]; ?>" alt=""></a>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="screenshot_img">
-                                  <a href="<?php echo get_template_directory_uri(); ?>/images/avs.png" class="image-link"><img src="<?php echo get_template_directory_uri(); ?>/images/avs.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="screenshot_img">
-                                 <a href="<?php echo get_template_directory_uri(); ?>/images/ccit.png" class="image-link"><img src="<?php echo get_template_directory_uri(); ?>/images/ccit.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="screenshot_img">
-                                 <a href="<?php echo get_template_directory_uri(); ?>/images/alpha.png" class="image-link"><img src="<?php echo get_template_directory_uri(); ?>/images/alpha.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="screenshot_img">
-                                  <a href="<?php echo get_template_directory_uri(); ?>/images/choice.png" class="image-link"><img src="<?php echo get_template_directory_uri(); ?>/images/choice.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="screenshot_img">
-                                  <a href="<?php echo get_template_directory_uri(); ?>/images/suryasai.png" class="image-link"><img src="<?php echo get_template_directory_uri(); ?>/images/suryasai.png" alt=""></a>
-                            </div>
-                        </div>
+                     <?php }
+                   endforeach; 
+    wp_reset_postdata();
+}
+                        ?>
+                      
+                     
+                       
                     
                     </div>
                     <div class="text-center">
@@ -415,30 +400,29 @@
             <h2 class="f_size_30 f_600 t_color3 l_height40 text-center mb_60">We've heard things like</h2>
             <div class="agency_testimonial_info">
                  <div class="testimonial_slider owl-carousel">
-                    <div class="testimonial_item text-center left">
+                     <?php 
+                        $lastposts = get_posts([
+  'post_type' => 'testmonials',
+  'post_status' => 'publish',
+  'numberposts' => -1,
+   'order'    => 'ASC'
+]);
+                        if ( $lastposts ) {
+    foreach ( $lastposts as $post ) :
+        setup_postdata( $post ); ?>
+                    <div class="testimonial_item text-center">
                         <div class="author_img"><img src="" alt=""></div>
                         <div class="author_description">
-                            <h4 class="f_500 t_color3 f_size_18">Shilpa Patel</h4>
-                            <h6>Founder of Bongos Adventure</h6>
+                            <h4 class="f_500 t_color3 f_size_18"><?php echo the_title(); ?></h4>
+                            <h6><?php echo get_field("job_description"); ?></h6>
                         </div>
-                        <p>Working with WebmobileZ.com has been a really great experience that has taken my online business to a new level. From the moment I contacted their customer support, WebmobileZ service has been assisting me with exceptional services built around result driven campaigns. For anyone looking for a professional team to manage web marketing and PPC, get in touch with WebmobileZ.com because they will save your business time and money with their expertise and know-how. Look forward to doing very long term business! Marketing has paid off, thanks, guys!</p>
+                        <p><?php echo the_content(); ?></p>
                     </div>
-                    <div class="testimonial_item text-center center">
-                        <div class="author_img"><img src="" alt=""></div>
-                        <div class="author_description">
-                            <h4 class="f_500 t_color3 f_size_18">Jennifer Crouch</h4>
-                            <h6>CEO of MoosAngels</h6>
-                        </div>
-                        <p>I've fished several e-commerce platforms and marketplaces that could enter to my business model.The support team was helpful with everything.</p>
-                    </div>
-                    <div class="testimonial_item text-center right">
-                        <div class="author_img"><img src="" alt=""></div>
-                        <div class="author_description">
-                            <h4 class="f_500 t_color3 f_size_18">Hanny</h4>
-                            <h6>Founder of AlphaTechInc</h6>
-                        </div>
-                        <p>I would like to thank WebmobileZ team for the excellent work. The team  works superbly and technical support is very great. I encourage people to do business with this company!</p>
-                    </div>
+                   <?php 
+                   endforeach; 
+    wp_reset_postdata();
+}
+                        ?>
                 </div> 
             </div>
         </div>

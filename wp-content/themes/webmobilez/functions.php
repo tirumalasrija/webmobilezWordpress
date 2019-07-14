@@ -194,6 +194,90 @@ function custom_post_type() {
      
     // Registering your Custom Post Type
     register_post_type( 'technologies', $args );
+    // Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => _x( 'Projects', 'Post Type General Name', 'webmobilez' ),
+        'singular_name'       => _x( 'Project', 'Post Type Singular Name', 'webmobilez' ),
+        'menu_name'           => __( 'Projects', 'webmobilez' ),
+        'parent_item_colon'   => __( 'Parent Project', 'webmobilez' ),
+        'all_items'           => __( 'All Projects', 'webmobilez' ),
+        'view_item'           => __( 'View Project', 'webmobilez' ),
+        'add_new_item'        => __( 'Add New Project', 'webmobilez' ),
+        'add_new'             => __( 'Add New', 'webmobilez' ),
+        'edit_item'           => __( 'Edit Project', 'webmobilez' ),
+        'update_item'         => __( 'Update Project', 'webmobilez' ),
+        'search_items'        => __( 'Search Project', 'webmobilez' ),
+        'not_found'           => __( 'Not Found', 'webmobilez' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'webmobilez' ),
+    );
+     
+// Set other options for Custom Post Type
+     
+    $args = array(
+        'label'               => __( 'Projects', 'webmobilez' ),
+        'description'         => __( 'Project news and reviews', 'webmobilez' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+         
+       
+    );
+     
+    // Registering your Custom Post Type
+    register_post_type( 'Projects', $args );
+    // Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => _x( 'Testmonials', 'Post Type General Name', 'webmobilez' ),
+        'singular_name'       => _x( 'Testmonial', 'Post Type Singular Name', 'webmobilez' ),
+        'menu_name'           => __( 'Testmonials', 'webmobilez' ),
+        'parent_item_colon'   => __( 'Parent Testmonial', 'webmobilez' ),
+        'all_items'           => __( 'All Testmonials', 'webmobilez' ),
+        'view_item'           => __( 'View Testmonial', 'webmobilez' ),
+        'add_new_item'        => __( 'Add New Testmonial', 'webmobilez' ),
+        'add_new'             => __( 'Add New', 'webmobilez' ),
+        'edit_item'           => __( 'Edit Testmonial', 'webmobilez' ),
+        'update_item'         => __( 'Update Testmonial', 'webmobilez' ),
+        'search_items'        => __( 'Search Testmonial', 'webmobilez' ),
+        'not_found'           => __( 'Not Found', 'webmobilez' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'webmobilez' ),
+    );
+     
+// Set other options for Custom Post Type
+     
+    $args = array(
+        'label'               => __( 'Testmonials', 'webmobilez' ),
+        'description'         => __( 'Testmonial news and reviews', 'webmobilez' ),
+        'labels'              => $labels,
+        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+         
+       
+    );
+     
+    // Registering your Custom Post Type
+    register_post_type( 'testmonials', $args );
  
 }
  
