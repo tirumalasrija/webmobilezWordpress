@@ -3356,8 +3356,8 @@
         display: none;
     }
     .company_banner_area .company_banner_content h2 {
-        font-size: 35px;
-        line-height: 46px;
+       font-size: 18px;
+       line-height: 32px;
     }
     .testimonial_slider_four .item p{
         color: #677294;
@@ -3422,4 +3422,67 @@
     .payment_content_two .payment_img .payment_icon.icon_one,.payment_content_two .payment_img .payment_icon.icon_two,.payment_content_two .payment_img .payment_icon.icon_three,.payment_content_two .payment_img .payment_icon.icon_four,.payment_content_two .payment_img .payment_icon.icon_five,.payment_content_two .payment_img .payment_icon.icon_six{
         display: none;
     }
+}
+
+/* section content - */
+
+
+@media only screen and (max-width: 992px) {
+    .section--portfolio {
+        flex-direction: column;
+    }
+
+.section--portfolio:nth-child(1) .section__left {
+    order: 0;
+    text-align: left;
+}
+
+.section--portfolio:nth-child(1) .section__right {
+    order: 1;
+}
+
+.section__left  {
+    flex: auto;
+    max-width: none;
+    width: 100%;
+}
+
+.section__right {
+     flex: auto;
+    max-width: none;
+    width: 100%;
+}
+
+.section__right .section__title {
+    text-align: center;
+}
+.section__title span.caption {
+    text-align: center;
+}
+
+.section__title {
+        margin: 1rem auto;
+    padding: 0;
+}
+
+.scrollbar {
+    height: auto;
+}
+
+
+.section__description {
+    text-align: center;
+}
+
+.btn.btn--border-primary {
+    padding: 12px 10px;
+}
+
+.btn.btn--primary {
+     padding: 12px 10px;
+}
+
+.btns-wrapper .btn:nth-child(2) {
+    margin-left: 10px;
+}
 }
