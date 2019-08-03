@@ -1,4 +1,3 @@
-
   <?php 
 
   /* Template Name: Digital Marketing
@@ -11,8 +10,9 @@
                     <div class="col-lg-6">
                         <div class="startup_content_three">
                             <h2><span>Digital Marketing</h2>
-                            <p>Need to build a stronger national or global presence online for your products or services? WebMobilez has helped many businesses expand into new regions and markets with advanced SEO and content marketing techniques. If you’re ready to grow, give us a call.</p>
-     
+                 <p>Need to build a stronger national or global presence online for your products or services? WebMobilez has helped many businesses expand into new regions and markets with advanced SEO and content marketing techniques. If you’re ready to grow, give us a call.</p>
+
+     
                             
                         </div>
                     </div>
@@ -116,8 +116,7 @@
             <div class="container">
                 <div class="sec_title text-center wow fadeInUp" data-wow-delay="0.3s">
                     <h2 class="f_p f_size_30 l_height50 f_600 t_color">Digital Marketing</h2>
-                    <p class="f_400 f_size_18 l_height34">Why I say old chap that is spiffing lavatory chip shop gosh off his nut, smashing boot<br> are you taking the piss posh loo brilliant matie boy.!</p>
-                </div>
+</div>
                 <div class="round_shape mt_30">
                     <div class="symbols-pulse active">
                         <div class="pulse-1"></div>
@@ -134,7 +133,7 @@
 -->
                     <div class="r_shape r_shape_five">
                         <span class="text">
-                            <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/images/seo.png" alt=""></a>
+                            <a href="<?php echo site_url(''); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/seo.png" alt=""></a>
                             <!--                        <span class="round"></span>-->
                         </span>
                     </div>
@@ -156,7 +155,7 @@
                         </div>
                         <div class="promo_item item_four scroll_animation">
                             <div class="text">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/Linkedin.png"  alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.png"  alt="">
                             </div>
                         </div>
                         <div class="promo_item item_five scroll_animation">

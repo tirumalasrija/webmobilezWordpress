@@ -27,36 +27,16 @@
                         <div class="contact_info_item">
                             <h6 class="f_p f_size_20 t_color3 f_500 mb_20">Contact Info</h6>
                             <p class="f_400 f_size_15"><span class="f_400 t_color3">Phone:</span> <a href="tel:3024437488">(224) 703-3561</a></p>
-                            <p class="f_400 f_size_15"><span class="f_400 t_color3">Email:</span> <a href="mailto:hello@webmobilez.com">hello@webmobilez.com</a></p>
+                            <p class="f_400 f_size_15"><span class="f_400 t_color3">Email:</span><a href="mailto:hello@webmobilez.com">hello@webmobilez.com</a></p>
                         </div>
                     </div>
                     <div class="col-lg-8 offset-lg-1">
                         <div class="contact_form">
-                            <form action="contact_process.php" class="contact_form_box" method="post" id="contactForm" novalidate="novalidate">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group text_box">
-                                            <input type="text" id="name" name="name" placeholder="Your Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group text_box">
-                                            <input type="text" name="email" id="email" placeholder="Your Email">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group text_box">
-                                            <input type="text" id="subject" name="subject" placeholder="Subject">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group text_box">
-                                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Your Message . . ."></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn_three">Send Message</button>
-                            </form>
+                           
+                               
+								<?php echo do_shortcode('[contact-form-7 id="contactForm" class="contact_form_box" title="Contact form 1"]'); ?>
+                               
+                           
                             <div id="success">Your message succesfully sent!</div>
                             <div id="error">Opps! There is something wrong. Please try again</div>
                         </div>

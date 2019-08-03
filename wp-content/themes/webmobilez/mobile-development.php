@@ -4,8 +4,11 @@
   /* Template Name: Mobile Development
     */
   get_header();
-  ?>  
-  <section class="slider_area">
+  ?> 
+
+
+
+		<section class="slider_area">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 d-flex align-items-center">
@@ -28,8 +31,8 @@
             <img class="middle_shape" src="<?php echo get_template_directory_uri(); ?>/img/home2/shape_01.png" alt="">
             <img class="bottom_shoape" src="<?php echo get_template_directory_uri(); ?>/img/home2/shape.png" alt="">
         </section>
-  
-    <section class="features_area sec_pad">
+	
+		<section class="features_area sec_pad">
             <div class="container">
                 <div class="row feature_info">
                     <div class="col-lg-7">
@@ -39,8 +42,8 @@
                             <img class="leaf three wow fadeInLeft" data-wow-delay="0.7s" src="img/home2/featureimg1-2.png" alt=""> -->
                         </div>
                     </div>
-                    <div class="col-lg-5">0                       <div class="f_content">
-                       
+                    <div class="col-lg-5">
+                        <div class="f_content">
                             <h2 class="f_600 f_size_30">Android Development</h2>
                             <p class="f_400">We enable you to express your ideas in a mobile-first world with our Android app development service. By following enterprise-level development practices, we build Android apps that are safe in a connected world without compromising speed.</p>
                         </div>
@@ -91,7 +94,7 @@
                 </div>
             </div>
         </section>
-     <section class="prototype_service_area_three bg_color">
+		 <section class="prototype_service_area_three bg_color">
         <div class="container">
             <div class="prototype_service_info">
                 <div class="symbols-pulse active">
@@ -105,7 +108,7 @@
                 <div class="row p_service_info">
                     <div class="col-lg-4 col-sm-6">
                         <div class="p_service_item pr_70 wow fadeInLeft" data-wow-delay="0.3s">
-                            <div class="icon icon_one"><i class="ti-panel"></i></div>
+                            <div class="icon icon_one"><i class="ti-desktop"></i></div>
                             <h5 class="f_600 f_p t_color3">Design</h5>
                              <ul class="list-unstyled f_list">
                                  <li>UX and UI Design</li>
@@ -117,7 +120,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="p_service_item pl_50 pr_20 wow fadeInLeft" data-wow-delay="0.5s">
-                            <div class="icon icon_two"><i class="ti-layout-grid2"></i></div>
+                            <div class="icon icon_two"><i class="ti-settings"></i></div>
                             <h5 class="f_600 f_p t_color3">Development</h5>
                           <ul class="list-unstyled f_list">
                                  <li>Swift</li>
@@ -129,7 +132,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="p_service_item pl_70 wow fadeInLeft" data-wow-delay="0.4s">
-                            <div class="icon icon_three"><i class="ti-fullscreen"></i></div>
+                            <div class="icon icon_three"><i class="icon-screen-smartphone"></i></div>
                             <h5 class="f_600 f_p t_color3">Tools</h5>
                              <ul class="list-unstyled f_list">
                                  <li>Android Studio</li>
@@ -153,7 +156,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="p_service_item pl_50 pr_20 wow fadeInLeft" data-wow-delay="0.5s">
-                            <div class="icon icon_five"><i class="ti-cloud-down"></i></div>
+                            <div class="icon icon_five"><i class="ti-cloud"></i></div>
                             <h5 class="f_600 f_p t_color3">Cloud Service</h5>
                              <ul class="list-unstyled f_list">
                                  <li>AWS</li>
@@ -164,7 +167,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="p_service_item pl_70 wow fadeInLeft" data-wow-delay="0.7s">
-                            <div class="icon icon_six"><i class="ti-bolt"></i></div>
+                            <div class="icon icon_six"><i class="icon-support"></i></div>
                             <h5 class="f_600 f_p t_color3">Support</h5>
                              <ul class="list-unstyled f_list">
                                  <li>24/7 Monitor</li>
@@ -176,6 +179,49 @@
             </div>
         </div>
     </section>
+		
+		
+<!-- 		<div class="case_study_details_area_three sec_pad">
+            <div class="container">
+                <div class="row study_details_three">
+                    <div class="col-lg-12">
+                        <div class="study_details_content">
+                            <h2>WebMobileZ Mobile Development Methedology</h2>
+                            <p>A bit of how's your father cuppa up the kyver cup of char I tomfoolery bobby morish cheeky brilliant say burke knees up, lost the plot hunky-dory only a quid geeza amongst spend a penny bog-standard haggle squiffy Jeffrey porkies he nicked it brown bread</p>
+                        </div>
+                    </div>
+					<div class="container">
+						<div class="row text-center client_methodolgy">
+							<div class="col-md">
+								<img src="images/1.png" alt="">
+								<h6>Client</h6>
+							</div>
+							<div class="col-md">
+								<img src="images/2.png" alt="">
+								<h6>Project Analsis</h6>
+							</div>
+							<div class="col-md">
+								<img src="images/3.png" alt="">
+								<h6>Design & Development</h6>
+							</div>
+							<div class="col-md">
+								<img src="images/4.png" alt="">
+								<h6>Quality Control</h6>
+							</div>
+							<div class="col-md">
+								<img src="images/5.png" alt="">
+								<h6>Free Support 12 Months</h6>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div> -->
+		
+
+
+
+
 
         <?php 
   

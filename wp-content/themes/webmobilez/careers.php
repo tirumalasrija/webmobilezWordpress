@@ -24,106 +24,60 @@
                     
                     <div class="listing_tab">
                         <div class="item">
+                       			<?php 
+						$lastposts = get_posts([
+  'post_type' => 'job',
+  'post_status' => 'publish',
+  'numberposts' => -1,
+   'order'    => 'ASC'
+]);
+				$i=1;
+						if ( $lastposts ) {
+    foreach ( $lastposts as $post ) :
+        setup_postdata( $post ); ?>
                             <div class="list_item">
                                 <!-- <figure><a href="#"><img src="img/process/Avast_Antivirus.png" alt=""></a></figure> -->
                                 <div class="joblisting_text">
                                     <div class="job_list_table">
                                         <div class="jobsearch-table-cell">
-                                            <h4><a href="#" class="f_500 t_color3">Full stack developer</a></h4>
+                                            <h4><a href="#" class="f_500 t_color3"><?php the_title(); ?></a></h4>
                                             <ul class="list-unstyled">
-                                                <li class="p_color">Full Time</li>
-                                                <li>Published 4 months ago</li>
+                                                <li class="p_color">Full Time</li><li>
+                                                <?php
+                                                
+                                                $datetime1 = new DateTime( $post->post_date );
+$today_obj      = new DateTime( date( 'Y-m-d', strtotime( 'today' ) ) );            // Get today's Date Object
+
+$registered_obj = new DateTime( $post->post_date );    // Get the registration Date Object
+$interval_obj   = $today_obj->diff( $registered_obj );                              // Retrieve the difference Object
+
+if( $interval_obj->days > 1 ) {             // The most commonly hit condition at the top
+    echo __( "Published {$interval_obj->days} days ago", "" );
+} elseif( 0 == $interval_obj->days ) {      // IF they registered today
+    echo __( 'Published Today', '' );
+} elseif( 1 == $interval_obj->days ) {      // IF they registered yesterday
+    echo __( 'Published Yesterday', '' );
+} else {                                    // The off-chance we have less than zero
+    echo __( 'Published', '' );
+}
+?>
+                                               </li>
                                             </ul>
                                         </div>
                                         <div class="jobsearch-table-cell">
                                             <div class="jobsearch-job-userlist">
-                                                <a href="#" class="apply_btn">Apply Now</a>
+                                                <a href="<?php echo get_permalink(); ?>" class="apply_btn">Apply Now</a>
                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="list_item">
-                                <!-- <figure><a href="#"><img src="img/process/Avast_Antivirus.png" alt=""></a></figure> -->
-                                <div class="joblisting_text">
-                                    <div class="job_list_table">
-                                        <div class="jobsearch-table-cell">
-                                            <h4><a href="#" class="f_500 t_color3">Need android developer</a></h4>
-                                            <ul class="list-unstyled">
-                                                <li class="p_color">Full Time</li>
-                                                <li>Published 4 months ago</li>
-                                            </ul>
-                                        </div>
-                                        <div class="jobsearch-table-cell">
-                                            <div class="jobsearch-job-userlist">
-                                                <a href="#" class="apply_btn">Apply Now</a>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list_item">
-                              <!--   <figure><a href="#"><img src="img/process/Avast_Antivirus.png" alt=""></a></figure> -->
-                                <div class="joblisting_text">
-                                    <div class="job_list_table">
-                                        <div class="jobsearch-table-cell">
-                                            <h4><a href="#" class="f_500 t_color3">Need UI developer</a></h4>
-                                            <ul class="list-unstyled">
-                                                <li class="p_color">Full Time</li>
-                                                <li>Published 4 months ago</li>
-                                            </ul>
-                                        </div>
-                                        <div class="jobsearch-table-cell">
-                                            <div class="jobsearch-job-userlist">
-                                                <a href="#" class="apply_btn">Apply Now</a>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list_item">
-                               <!--  <figure><a href="#"><img src="img/process/Avast_Antivirus.png" alt=""></a></figure> -->
-                                <div class="joblisting_text">
-                                    <div class="job_list_table">
-                                        <div class="jobsearch-table-cell">
-                                            <h4><a href="#" class="f_500 t_color3">Need Php developer </a></h4>
-                                            <ul class="list-unstyled">
-                                                <li class="p_color">Full Time</li>
-                                                <li>Published 4 months ago</li>
-                                            </ul>
-                                        </div>
-                                        <div class="jobsearch-table-cell">
-                                            <div class="jobsearch-job-userlist">
-                                                <a href="#" class="apply_btn">Apply Now</a>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list_item">
-                                <!-- <figure><a href="#"><img src="img/process/Avast_Antivirus.png" alt=""></a></figure> -->
-                                <div class="joblisting_text">
-                                    <div class="job_list_table">
-                                        <div class="jobsearch-table-cell">
-                                            <h4><a href="#" class="f_500 t_color3">Need markers and sales</a></h4>
-                                            <ul class="list-unstyled">
-                                                <li class="p_color">Full Time</li>
-                                                <li>Published 4 months ago</li>
-                                            </ul>
-                                        </div>
-                                        <div class="jobsearch-table-cell">
-                                            <div class="jobsearch-job-userlist">
-                                                <a href="#" class="apply_btn">Apply Now</a>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+endforeach; 
+    wp_reset_postdata();
+}
+						?>
                         </div>
                     </div>
                     

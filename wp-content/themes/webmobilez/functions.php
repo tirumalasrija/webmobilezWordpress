@@ -278,6 +278,105 @@ function custom_post_type() {
      
     // Registering your Custom Post Type
     register_post_type( 'testmonials', $args );
+    
+$labels = array(
+		'name'                  => _x( 'Subscribes', 'Subscribe General Name', 'webmobilez' ),
+		'singular_name'         => _x( 'Subscribe', 'Subscribe Singular Name', 'webmobilez' ),
+		'menu_name'             => __( 'Subscribes', 'webmobilez' ),
+		'name_admin_bar'        => __( 'Subscribe', 'webmobilez' ),
+		'archives'              => __( 'Item Archives', 'webmobilez' ),
+		'attributes'            => __( 'Item Attributes', 'webmobilez' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'webmobilez' ),
+		'all_items'             => __( 'All Items', 'webmobilez' ),
+		'add_new_item'          => __( 'Add New Item', 'webmobilez' ),
+		'add_new'               => __( 'Add New', 'webmobilez' ),
+		'new_item'              => __( 'New Item', 'webmobilez' ),
+		'edit_item'             => __( 'Edit Item', 'webmobilez' ),
+		'update_item'           => __( 'Update Item', 'webmobilez' ),
+		'view_item'             => __( 'View Item', 'webmobilez' ),
+		'view_items'            => __( 'View Items', 'webmobilez' ),
+		'search_items'          => __( 'Search Item', 'webmobilez' ),
+		'not_found'             => __( 'Not found', 'webmobilez' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'webmobilez' ),
+		'featured_image'        => __( 'Featured Image', 'webmobilez' ),
+		'set_featured_image'    => __( 'Set featured image', 'webmobilez' ),
+		'remove_featured_image' => __( 'Remove featured image', 'webmobilez' ),
+		'use_featured_image'    => __( 'Use as featured image', 'webmobilez' ),
+		'insert_into_item'      => __( 'Insert into item', 'webmobilez' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'webmobilez' ),
+		'items_list'            => __( 'Items list', 'webmobilez' ),
+		'items_list_navigation' => __( 'Items list navigation', 'webmobilez' ),
+		'filter_items_list'     => __( 'Filter items list', 'webmobilez' ),
+	);
+	$args = array(
+		'label'                 => __( 'Subscribe', 'webmobilez' ),
+		'description'           => __( 'Subscribe Description', 'webmobilez' ),
+		'labels'                => $labels,
+	
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'show_in_rest' => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+	'hierarchical'          => true,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'Subscribe', $args );
+	$labels = array(
+		'name'                  => _x( 'Jobs', 'Job General Name', 'webmobilez' ),
+		'singular_name'         => _x( 'Job', 'Job Singular Name', 'webmobilez' ),
+		'menu_name'             => __( 'Jobs', 'webmobilez' ),
+		'name_admin_bar'        => __( 'Job', 'webmobilez' ),
+		'archives'              => __( 'Item Archives', 'webmobilez' ),
+		'attributes'            => __( 'Item Attributes', 'webmobilez' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'webmobilez' ),
+		'all_items'             => __( 'All Items', 'webmobilez' ),
+		'add_new_item'          => __( 'Add New Item', 'webmobilez' ),
+		'add_new'               => __( 'Add New', 'webmobilez' ),
+		'new_item'              => __( 'New Item', 'webmobilez' ),
+		'edit_item'             => __( 'Edit Item', 'webmobilez' ),
+		'update_item'           => __( 'Update Item', 'webmobilez' ),
+		'view_item'             => __( 'View Item', 'webmobilez' ),
+		'view_items'            => __( 'View Items', 'webmobilez' ),
+		'search_items'          => __( 'Search Item', 'webmobilez' ),
+		'not_found'             => __( 'Not found', 'webmobilez' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'webmobilez' ),
+		'featured_image'        => __( 'Featured Image', 'webmobilez' ),
+		'set_featured_image'    => __( 'Set featured image', 'webmobilez' ),
+		'remove_featured_image' => __( 'Remove featured image', 'webmobilez' ),
+		'use_featured_image'    => __( 'Use as featured image', 'webmobilez' ),
+		'insert_into_item'      => __( 'Insert into item', 'webmobilez' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'webmobilez' ),
+		'items_list'            => __( 'Items list', 'webmobilez' ),
+		'items_list_navigation' => __( 'Items list navigation', 'webmobilez' ),
+		'filter_items_list'     => __( 'Filter items list', 'webmobilez' ),
+	);
+	$args = array(
+		'label'                 => __( 'Job', 'webmobilez' ),
+		'description'           => __( 'Job Description', 'webmobilez' ),
+		'labels'                => $labels,
+	
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'show_in_rest' => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+	'hierarchical'          => true,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'Job', $args );
  
 }
  
@@ -300,3 +399,50 @@ function tr_create_my_taxonomy() {
     );
 }
 add_action( 'init', 'tr_create_my_taxonomy' );
+set_post_thumbnail_size( 50, 50 );
+function wpb_image_editor_default_to_gd( $editors ) {
+    $gd_editor = 'WP_Image_Editor_GD';
+    $editors = array_diff( $editors, array( $gd_editor ) );
+    array_unshift( $editors, $gd_editor );
+    return $editors;
+}
+add_filter( 'wp_image_editors', 'wpb_image_editor_default_to_gd' );
+function cf7_add_post_id(){
+    
+    global $post;
+    return $post->post_title ;
+}
+
+add_shortcode('CF7_ADD_POST_ID', 'cf7_add_post_id');
+function wpb_widgets_init() {
+
+register_sidebar( array(
+    'name' => __( 'Footer1', 'wpb' ),
+    'id' => 'sidebar-1',
+     'description' => __( 'Appears on the static front page template', 'wpb' ),
+    'before_widget' => '<div class="f_widget about-widget">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="f-title f_600 b_color f_size_18 mb_40">',
+    'after_title' => '</h3>',
+) );
+
+register_sidebar( array(
+    'name' =>__( 'Footer2', 'wpb'),
+    'id' => 'sidebar-2',
+    'description' => __( 'Appears on the static front page template', 'wpb' ),
+    'before_widget' => '<div class="f_widget company_widget">',
+    'after_widget' => '</div>',
+    'before_title' => '',
+    'after_title' => '',
+) );
+register_sidebar( array(
+    'name' =>__( 'Footer3', 'wpb'),
+    'id' => 'sidebar-3',
+    'description' => __( 'Appears on the static front page template', 'wpb' ),
+    'before_widget' => '<div class="f_widget about-widget">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="f-title f_600 b_color f_size_18 mb_40">',
+    'after_title' => '</h3>',
+) );
+}
+add_action( 'widgets_init', 'wpb_widgets_init' );

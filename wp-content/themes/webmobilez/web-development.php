@@ -5,12 +5,12 @@
     */
   get_header();
   ?>  
-  <section class="saas_banner_area_three owl-carousel">
+ <section class="saas_banner_area_three owl-carousel">
             <div class="slider_item">
                 <div class="container">
                     <div class="slidet_content">
                         <h2><span>WebmobileZ</span><br> Find the Best Solution in Seconds</h2>
-                        <p>Turning website visitors into customers is our number one goal when creating a new website and it should be yours too.</p>
+                         <?php echo get_field("slider_1_content"); ?>
                     </div>
                     <div class="image_mockup">
                     <!--     <img class="watch" src="img/new/mockup/Watch.png" alt="">
@@ -22,7 +22,7 @@
             <div class="slider_item slider_item_two">
                 <div class="container">
                     <div class="slidet_content_two text-center">
-                     <h3>  Our customers love working with us because we take care of everything in the web design process from planning to design, copywriting and more. Our web design process is hassle free and results driven.<h3>
+                    <?php echo get_field("slider_2_content"); ?>
                     </div>
                     <div class="image_mockup">
                       <!--   <img class="laptop" src="img/new/mockup/dashboard.png" alt=""> -->
@@ -30,15 +30,15 @@
                 </div>
             </div>
         </section>
-    <section class="startup_fuatures_area sec_pad">
+		<section class="startup_fuatures_area">
             <div class="container">
                 <div class="sec_title mb_70 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
                     <h2 class="f_p f_size_30 l_height40 f_600 t_color text-center">WebMobilez Expertise In</h2>
                 </div>
                 <ul class="nav nav-tabs startup_tab" id="myTab" role="tablist">
                      <li class="nav-item active">
-                        <a class="nav-link" id="engine-tab" data-toggle="tab" href="#engine" role="tab" aria-controls="engine" aria-selected="false">
-                            <span class="icon"><i class="icon-refresh"></i></span>
+                        <a class="nav-link active" id="engine-tab" data-toggle="tab" href="#engine" role="tab" aria-controls="engine" aria-selected="false">
+                            <span class="icon"><i class="ti-desktop"></i></span>
                             <h3>UI/UX<br> Design</h3>
                         </a>
                     </li>
@@ -50,87 +50,112 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="hubstaff-tab" data-toggle="tab" href="#hubstaff" role="tab" aria-controls="hubstaff" aria-selected="false">
-                            <span class="icon"><i class="icon-graduation"></i></span>
+                            <span class="icon"><i class="icon-settings"></i></span>
                             <h3>CMS<br> Integration</h3>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="business-tab" data-toggle="tab" href="#business" role="tab" aria-controls="business" aria-selected="false">
-                            <span class="icon"><i class="icon-bulb"></i></span>
+                            <span class="icon"><i class="icon-support"></i></span>
                             <h3>Testing<br>Support</h3>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="market-tab" data-toggle="tab" href="#market" role="tab" aria-controls="market" aria-selected="true">
-                            <span class="icon"><i class="icon-cloud-upload"></i></span>
+                            <span class="icon"><i class="ti-cloud"></i></span>
                             <h3>AWS/Azure <br>Cloud</h3>
                         </a>
                     </li>
                 </ul>
-                
+               <div class="tab-content startup_tab_content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="engine" role="tabpanel" aria-labelledby="engine-tab">
+                        <div class="startup_tab_img">
+                            <?php echo get_field("uiux_design"); ?>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
+                        <div class="startup_tab_img">
+                            <?php echo get_field("ecommerce_apps"); ?>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="hubstaff" role="tabpanel" aria-labelledby="hubstaff-tab">
+                        <div class="startup_tab_img">
+                            <?php echo get_field("cms_integration"); ?>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="business" role="tabpanel" aria-labelledby="business-tab">
+                        <div class="startup_tab_img">
+                            <?php echo get_field("testing_support"); ?>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="market" role="tabpanel" aria-labelledby="market-tab">
+                        <div class="startup_tab_img">
+                          <?php echo get_field("awsazure_"); ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-    
-    <section class="hosting_features_area">
+<?php if(get_field("why_we_need_website")){  
+	/** ?>
+		<section class="hosting_features_area">
             <div class="container">
-        
+				
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="h_features_img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/hosting/business1.png" alt="" data-pagespeed-url-hash="2337690359" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                            <img src="<?php echo get_field("why_we_need_website_image"); ?>" alt="" data-pagespeed-url-hash="2337690359" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="h_features_content">
                             <div class="hosting_title">
-                                <h2>Why We Need Website</h2>
-                                <p>Don't get shirty with me owt to do with me arse down the pub have it car boot happy days no biggie bevvy only a quid I, in my flat the little rotter cheeky.!</p>
+                               
+                                <?php echo get_field("why_we_need_website"); ?>
                             </div>
                             <div class="media h_features_item">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/hosting/icon7.png" alt="" data-pagespeed-url-hash="3881791248" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                              <!--  <img src="<?php echo get_template_directory_uri(); ?>/img/hosting/icon7.png" alt="" data-pagespeed-url-hash="3881791248" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> -->
                                 <div class="media-body">
-                                    <h4 class="h_head">High speed server</h4>
-                                    <p>Hunky dory barney fanny around up the duff no biggie.</p>
+                                    <?php echo get_field("why_we_need_website_feature1"); ?>
                                 </div>
                             </div>
                             <div class="media h_features_item">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/hosting/icon8.png" alt="" data-pagespeed-url-hash="4176291169" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                              <!--  <img src="<?php echo get_template_directory_uri(); ?>/img/hosting/icon8.png" alt="" data-pagespeed-url-hash="4176291169" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> -->
                                 <div class="media-body">
-                                    <h4 class="h_head">Move faster</h4>
-                                    <p>Hunky dory barney fanny around up the duff no biggie.</p>
+                                   <?php echo get_field("why_we_need_website_feature2"); ?>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
+<?php  **/ 
+}
+?>
         <section class="hosting_features_area">
             <div class="container">
                 <div class="row flex-row-reverse">
                     <div class="col-lg-6">
                         <div class="h_features_img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/hosting/business2.png" alt="" data-pagespeed-url-hash="2632190280" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                           <img src="<?php echo get_field("develope_a_website_content_image"); ?>" alt="" data-pagespeed-url-hash="2632190280" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="h_features_content">
                             <div class="hosting_title">
-                                <h2>How we are helping with develope a website</h2>
-                                <p>Don't get shirty with me owt to do with me arse down the pub have it car boot happy days no biggie bevvy only a quid I, in my flat the little rotter cheeky.!</p>
+                               <?php echo get_field("develope_a_website_content"); ?>
                             </div>
                             <div class="media h_features_item">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/hosting/icon9.png" alt="" data-pagespeed-url-hash="175823794" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                               <!--<img src="<?php echo get_template_directory_uri(); ?>/img/hosting/icon9.png" alt="" data-pagespeed-url-hash="175823794" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">-->
                                 <div class="media-body">
-                                    <h4 class="h_head">Reseller Hosting</h4>
-                                    <p>Hunky dory barney fanny around up the duff no biggie.</p>
+                                   <?php echo get_field("develope_a_website__feature_1"); ?>
                                 </div>
                             </div>
                             <div class="media h_features_item">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/hosting/icon10.png" alt="" data-pagespeed-url-hash="2600469816" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                              <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/hosting/icon10.png" alt="" data-pagespeed-url-hash="2600469816" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">-->
                                 <div class="media-body">
-                                    <h4 class="h_head">Wordpress Hosting</h4>
-                                    <p>Hunky dory barney fanny around up the duff no biggie.</p>
+                                     <?php echo get_field("develope_a_website_feature2"); ?>
                                 </div>
                             </div>
                         </div>
@@ -138,20 +163,18 @@
                 </div>
             </div>
         </section>
-      <section class="call_action_area">
+		  <section class="call_action_area">
             <img class="leaf action_one" data-parallax='{"x": -50, "y": 0}' src="<?php echo get_template_directory_uri(); ?>/img/home2/app_bg.png" alt="">
             <img class="leaf action_two" data-parallax='{"x": 40, "y": 0}' src="<?php echo get_template_directory_uri(); ?>/img/home2/bg_shape.png" alt="">
             <div class="container">
                 <div class="action_content text-center">
-                    <h2 class="f_p f_size_40 l_height50 f_700">Device friendly widget</h2>
-                    <p>Why I say old chap that is spiffing me old mucker, lurgy brown bread grub the BBC the full monty chancer ruddy dropped a clanger, only a quid blag mush cracking goal mufty blow.!</p>
-                    <a href="#" class="action_btn btn_hover mt_40">Get Started</a>
+                    <?php echo get_field("device_friendly_widget"); ?>
                 </div>
             </div>
         </section>
 
-  
-               <section class="partner_logo_area_five" >
+
+        <section class="partner_logo_area_five" >
             <div class="container">
                 <h2 class="f_size_30 f_600 text-center t_color l_height45 mb_50"><?php echo get_field("technology_title"); ?></h2>
                 <div class="developer_product_content d_product_content_two text-center p-0">
@@ -228,7 +251,7 @@
                                             ?>
            <li class="tech-icon flex-column align-content-center">
                                         <div>
-                                        <img src=<?php echo esc_url($featured_img_url); ?> alt="">
+                                        <img  class="img-fluid"  src=<?php echo esc_url($featured_img_url); ?> alt="">
                                          <p><?php echo get_the_title();?></p>
                                         </div>
                                     </li>

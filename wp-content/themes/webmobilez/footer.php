@@ -19,28 +19,25 @@
                     <div class="row">
                         
                         <div class="col-lg-4 col-sm-6">
-                            <div class="f_widget about-widget">
-                                <h3 class="f-title f_600 b_color f_size_18 mb_40">Discuss a Project</h3>
-                                <ul class="list-unstyled f_list">
-                                    <li>Phone:  +1 (224) 703-3561 (Sales)</li>
-                                    <li>For Business:  srija@webmobilez.com</li>
-                                </ul>
-                            </div>
+                            <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+
+                            <?php dynamic_sidebar( 'sidebar-1' ); ?>
+                            <?php endif; ?>
                         </div>
 						<div class="col-lg-4 col-sm-6 text-center">
                             <div class="f_widget company_widget">
-                                <a href="index.html" class="f-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="logo"></a>
-                                <p class="mt_40">Copyright © 2017 <a href="#"> WebmobileZ</a>  Technologies  All rights reserved.</p>
+                                <a href="<?php echo site_url(''); ?>" class="f-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="logo"></a>
+                                <p class="mt_40">Copyright © 2017 <a href="<?php echo site_url(''); ?>"> WebmobileZ</a>  Technologies  All rights reserved.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-6">
                             <div class="f_widget about-widget text-right">
-                                <h3 class="f-title f_600 b_color f_size_18 mb_40">Address</h3>
-                                <ul class="list-unstyled f_list">
-                                    <li><a href="#">USA: 32985 Hamilton Ct<br>
-Farmington hills, MI 48334</a></li>
-                                
-                                </ul>
+                                 <?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+
+                            <?php dynamic_sidebar( 'sidebar-3' ); ?>
+                            <?php endif; ?>
+                               
+                              
                             </div>
                         </div>
                     </div>
@@ -56,37 +53,18 @@ Farmington hills, MI 48334</a></li>
                  <h2>Let's Build Something Great Together</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             </div>
-            <div class="modal-body">        
-               <form>
-                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Your Name</label>
-                    <input type="text" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlInput1">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                  </div>
-                     <div class="form-group">
-                    <label for="exampleFormControlInput1">Phone Number</label>
-                    <input type="text" class="form-control" placeholder="(234) 279-2689">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlSelect1">Service(S) You Are Interested In:</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                      <option value="" selected disabled hidden>Choose here</option>
-                      <option>UI/UX Design</option>
-                      <option>Web Development</option>
-                      <option>Mobile Development</option>
-                      <option>Digital Marketing</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Tell Us About Your Project </label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                  </div>
-                   <button type="submit" class="btn btn-primary text-center">Submit</button>
-                </form>
+            <div class="modal-body">
+				<div class="calendly-inline-widget" data-url="https://calendly.com/srija/webmobilez-team-meeting" style="min-width:320px;height:630px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+<!-- Calendly inline widget end -->
+            <?php //echo do_shortcode('[contact-form-7 id="548" title="Get Start"]');
+				?>
             </div>
+				
+			    <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>	
+				
         </div>
   </div>
 </div>
@@ -107,7 +85,32 @@ Farmington hills, MI 48334</a></li>
     <script src="<?php echo get_template_directory_uri(); ?>/vendors/stellar/jquery.stellar.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/vendors/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
-
+ <script src="https://unpkg.com/jquery-input-mask-phone-number@1.0.11/dist/jquery-input-mask-phone-number.js"></script>
+<script>
+	  $(document).ready(function () {
+                $('.phone_us').usPhoneFormat({
+                    format: '(xxx) xxx-xxxx',
+                });
+	  });
+	  $(function () {
+      $('.alpha').keydown(function (e) {
+          if (e.shiftKey || e.ctrlKey || e.altKey) {
+              e.preventDefault();
+          } else {
+              var key = e.keyCode;
+              if (!((key == 8) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+                  e.preventDefault();
+              }
+          }
+      });
+  });
+ 
+ $(".wpcf7-submit").click(function(){
+  setTimeout(function(){
+  $('.bd-example-modal-l').modal('hide')
+}, 4000);
+});
+</script>
 <?php wp_footer(); ?>
 
 </body>

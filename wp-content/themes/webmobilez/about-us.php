@@ -15,17 +15,17 @@ and exceed your expectations</p>
             </div>
         </section>
 	
-		<section class="features_area sec_pad">
+	<section class="features_area sec_pad">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-4">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/vission.png" class="img-fluid" alt="">
+                        <img src="<?php echo get_field("vision_image"); ?>" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-8">
                         <div class="">
                             
-                            <h2 class="f_600 f_size_30">Vission</h2>
-                            <p class="f_400">To be a pre-eminent body of the IT industry, recognized globally for Integrity, Affordability, and Quality</p>
+                            <h2 class="f_600 f_size_30">Vision</h2>
+                            <?php echo get_field("vision_content"); ?>
                         </div>
                     </div>
                 </div>
@@ -34,158 +34,212 @@ and exceed your expectations</p>
                         <div class="">
                             
                             <h2 class="f_600 f_size_30">Mission</h2>
-                            <p class="f_400">Creating innovative technology solutions to empower entrepreneurs & startups; thereby, enabling them to serve their customers better. To invest in ideas that will step-up the ecommerce game in future & to work with entrepreneurs to promote the culture of learning & collaboration in the business world</p>
+                           <?php echo get_field("mission_content"); ?>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/mission.png" class="img-fluid" alt="">
+                        <img src="<?php echo get_field("mission_image"); ?>" class="img-fluid" alt="">
                     </div>
                     
                 </div>
                 
             </div>
         </section>
-		  <section class="process_area bg_color sec_pad">
+		    <section class="process_area bg_color sec_pad">
             <div class="container">
-                <div class="features_info">
-                   <!--  <img class="dot_img" src="img/process/divider.png" alt=""> -->
-                    <div class="row agency_featured_item mt-0 flex-row-reverse">
+
+
+            <div class="row">
+                    <div class="col-lg-3 col-md-3">
+                        <ul class="nav nav-tabs software_service_tab" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active show" id="de-tab" data-toggle="tab" href="#de" role="tab" aria-controls="de" aria-selected="true">Analysis</a> 
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="saas-tab" data-toggle="tab" href="#saas" role="tab" aria-controls="saas" aria-selected="false">Planing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="ma-tab" data-toggle="tab" href="#ma" role="tab" aria-controls="ma" aria-selected="false">Wireframe</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="secure-tab" data-toggle="tab" href="#secure" role="tab" aria-controls="secure" aria-selected="false">Design</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="scale-tab" data-toggle="tab" href="#scale" role="tab" aria-controls="scale" aria-selected="false">Develop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="monitor-tab" data-toggle="tab" href="#monitor" role="tab" aria-controls="monitor" aria-selected="false">Testing</a>
+                            </li>
+
+                             <li class="nav-item">
+                                <a class="nav-link" id="testing-tab" data-toggle="tab" href="#testing" role="tab" aria-controls="testing" aria-selected="false">Launch</a>
+                            </li>
+
+                             <li class="nav-item">
+                                <a class="nav-link" id="lounch-tab" data-toggle="tab" href="#lounch" role="tab" aria-controls="lounch" aria-selected="false">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9 col-md-9">
+                        <div class="tab-content software_service_tab_content">
+
+                            <div class="tab-pane fade active show" id="de" role="tabpanel" aria-labelledby="de-tab">
+                               <div class="row agency_featured_item mt-0 flex-row-reverse">
                         <div class="col-md-6">
                             <div class="agency_featured_img text-right">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/analysis.png"  alt="">
+                                <img src="<?php  echo get_field("analysis_image"); ?>"  alt="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="agency_featured_content pr_70 pl_70">
                                 <div class="dot"><span class="dot1"></span><span class="dot2"></span></div>
-                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/home4/icon01.png" alt="">
+                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/process/1.png" alt="">
                                 <h3>ANALYSIS</h3>
-                                <p>After gathering requirements, business analysts & concerned team (design / development / marketing) analyze the project's complexity and decides delivery timeframe.</p>
+                              <?php echo get_field("analysis_title"); ?>
                                 <a href="#" class="icon mt_30"><i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="row agency_featured_item agency_featured_item_two">
+                            </div>
+                            <div class="tab-pane fade" id="saas" role="tabpanel" aria-labelledby="saas-tab">
+                               <div class="row agency_featured_item mt-0 agency_featured_item_two">
                         <div class="col-md-6">
                             <div class="agency_featured_img text-right">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/planning.png"  alt="">
+                                <img src="<?php echo get_field("planning_image"); ?>"  alt="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="agency_featured_content pl_100">
                                 <div class="dot"><span class="dot1"></span><span class="dot2"></span></div>
-                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/home4/icon02.png" alt="">
+                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/process/2.png" alt="">
                                 <h3>PLANNING</h3>
-                                <p>Based on the scope & deadline of the project, we strategize agile development methodology to ensure optimum outcome in the most efficient manner.!</p>
+                               <?php echo get_field("planning_title"); ?>
                                 <a href="#" class="icon mt_30"><i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="row agency_featured_item flex-row-reverse">
+                            </div>
+                            <div class="tab-pane fade" id="ma" role="tabpanel" aria-labelledby="ma-tab">
+                                <div class="row agency_featured_item mt-0 flex-row-reverse">
                         <div class="col-md-6">
                             <div class="agency_featured_img text-right">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/wireframes.png" alt="">
+                                <img src="<?php echo get_field("wire_frame_image"); ?>" alt="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="agency_featured_content pr_70 pl_70">
                                 <div class="dot"><span class="dot1"></span><span class="dot2"></span></div>
-                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/home4/icon3.png" alt="">
+                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/process/3.png" alt="">
                                 <h3>WIREFRAME</h3>
-                                <p>We begin to give shape to your project by creating rich wireframes, check their intuitiveness, and then create their PSD for their visual appeal.</p>
+                                <?php echo get_field("wire_frame_title"); ?>
                                 <a href="#" class="icon mt_30"><i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="row agency_featured_item agency_featured_item_two">
+                            </div>
+                            <div class="tab-pane fade" id="secure" role="tabpanel" aria-labelledby="secure-tab">
+                               <div class="row agency_featured_item mt-0 agency_featured_item_two">
                         <div class="col-md-6">
                             <div class="agency_featured_img text-right">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/design.png" alt="">
+                                <img src="<?php echo get_field("design_image"); ?>" alt="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="agency_featured_content pl_100">
                                 <div class="dot"><span class="dot1"></span><span class="dot2"></span></div>
-                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/process/icon_04.png" alt="">
+                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/process/4.png" alt="">
                                 <h3>DESIGN</h3>
-                                <p>Once the design skeletons are ready, our design team begins the magic work on your website - giving it flawless look & feel across all devices.</p>
+                               <?php echo get_field("design_title"); ?>
                                 <a href="#" class="icon mt_30"><i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="row agency_featured_item flex-row-reverse">
+                            </div>
+                            <div class="tab-pane fade" id="scale" role="tabpanel" aria-labelledby="scale-tab">
+                               <div class="row agency_featured_item mt-0 flex-row-reverse">
                         <div class="col-md-6">
                             <div class="agency_featured_img text-right">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/develop.png" alt="">
+                                <img src="<?php echo get_field("develop_image"); ?>" alt="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="agency_featured_content pr_70 pl_70">
                                 <div class="dot"><span class="dot1"></span><span class="dot2"></span></div>
-                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/process/icon_05.png" alt="">
+                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/process/5.png" alt="">
                                 <h3>DEVELOP</h3>
-                                <p>Secure, fast, and impeccable micro-moments - our developers build not just a website or app, but create an experience for your users.</p>
+<?php echo get_field("develop_title"); ?>
                             
                             </div>
                         </div>
                     </div>
-                     <div class="row agency_featured_item agency_featured_item_two">
-                        <div class="col-md-6">
-                            <div class="agency_featured_img text-right">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/testing.png" alt="">
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="agency_featured_content pl_100">
-                                <div class="dot"><span class="dot1"></span><span class="dot2"></span></div>
-                                <img class="number" src="img/process/icon_04.png" alt="">
-                                <h3>TESTING</h3>
-                                <p>Our rigorous design & functionality tests detect the tiniest of the bugs in developed web platforms and ensure their effective elimination.</p>
-                                <a href="#" class="icon mt_30"><i class="ti-arrow-right"></i></a>
+                    <div class="tab-pane fade" id="monitor" role="tabpanel" aria-labelledby="monitor-tab">
+                        <div class="row agency_featured_item mt-0 agency_featured_item_two">
+                            <div class="col-md-6">
+                                <div class="agency_featured_img text-right">
+                                    <img src="<?php echo get_field("testing_image"); ?>" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="agency_featured_content pl_100">
+                                    <div class="dot"><span class="dot1"></span><span class="dot2"></span></div>
+                                    <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/process/6.png" alt="">
+                                    <h3>TESTING</h3>
+                                   <?php echo get_field("testing_title"); ?>
+                                    <a href="#" class="icon mt_30"><i class="ti-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                        <div class="row agency_featured_item flex-row-reverse">
+
+                <div class="tab-pane fade" id="testing" role="tabpanel" aria-labelledby="testing-tab">
+                     <div class="row agency_featured_item mt-0 flex-row-reverse">
                         <div class="col-md-6">
                             <div class="agency_featured_img text-right">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/launch.png" alt="">
+                                <img src=" <?php echo get_field("lunch_image"); ?>" alt="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="agency_featured_content pr_70 pl_70">
                                 <div class="dot"><span class="dot1"></span><span class="dot2"></span></div>
-                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/process/icon_05.png" alt="">
+                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/process/7.png" alt="">
                                 <h3>LAUNCH</h3>
-                                <p>Once ensured that your website/app doesn't have any design, functionality, & scalability issues - we give it the green light to go live.</p>
+                                <?php echo get_field("lunch_title"); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="row agency_featured_item agency_featured_item_two">
+                </div>
+
+                     <div class="tab-pane fade" id="lounch" role="tabpanel" aria-labelledby="lounch-tab">
+                        <div class="row agency_featured_item mt-0 agency_featured_item_two">
                         <div class="col-md-6">
                             <div class="agency_featured_img text-right">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/support.png" alt="">
+                                <img src="<?php echo get_field("support_imagfe"); ?>" alt="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="agency_featured_content pl_100">
                                 <div class="dot"><span class="dot1"></span><span class="dot2"></span></div>
-                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/process/icon_04.png" alt="">
+                                <img class="number" src="<?php echo get_template_directory_uri(); ?>/img/process/8.png" alt="">
                                 <h3>SUPPORT</h3>
-                                <p>We believe in building long-term relationship with our clients, thus, after project delivery we offer a 1-year free technical support.</p>
+                                <?php echo get_field("support_title"); ?>
                                 <a href="#" class="icon mt_30"><i class="ti-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="dot middle_dot"><span class="dot1"></span><span class="dot2"></span></div>
+                    </div>
+
                 </div>
             </div>
-        </section>
-
+        </div>
+<!--div class="dot middle_dot"><span class="dot1"></span><span class="dot2"></span></div-->
+<!--TAB CLOSE-->
+    </div>
+</section>
 		<section class="saas_features_area_three bg_color">
             <div class="container">
                 <div class="sec_title text-center mb_70 wow fadeInUp" data-wow-delay="0.3s">
-                    <h2 class="f_p f_size_30 l_height50 f_600 t_color">Our great services</h2>
-                    <p class="f_400 f_size_16">Skive off mush victoria sponge super lavatory it's all gone to pot<br> knees up fanny around vagabond</p>
+                    <h2 class="f_p f_size_30 l_height50 f_600 t_color">Our great services</h2>              
                 </div>
                 <div class="row mb_30 new_service">
                     <div class="col-lg-4 col-sm-6">
@@ -195,7 +249,9 @@ and exceed your expectations</p>
                             <div class="new_service_content">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/home-10/icon1.png" alt="">
                                 <h4 class="f_size_20 f_p t_color f_500">Web Development</h4>
-                                <p class="f_400 f_size_15 mb-0">Tosser blag bubble and squeak up the duff A bit of how's your father blatant morish char cuppa.!</p>
+                                <p class="f_400 f_size_15 mb-0">We’ll build a beautiful website that captures your visitor’s attention and business.
+                          Your website will always adapt to their device giving them the perfect website experience.</p>
+								<a href="<?php echo site_url('web-development'); ?>" class="learn_btn">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -206,7 +262,8 @@ and exceed your expectations</p>
                             <div class="new_service_content">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/home-10/icon2.png" alt="">
                                 <h4 class="f_size_20 f_p t_color f_500">Mobile Development</h4>
-                                <p class="f_400 f_size_15 mb-0">Tosser blag bubble and squeak up the duff A bit of how's your father blatant morish char cuppa.!</p>
+                                <p class="f_400 f_size_15 mb-0">We provide you with a flexible and comprehensive mobile app development solution to impart a seamless mobile experience to your customers.</p>
+									<a href="<?php echo site_url('mobile-development'); ?>" class="learn_btn">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -217,7 +274,9 @@ and exceed your expectations</p>
                             <div class="new_service_content">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/home-10/icon3.png" alt="">
                                 <h4 class="f_size_20 f_p t_color f_500">Digital Marketing</h4>
-                                <p class="f_400 f_size_15 mb-0">Tosser blag bubble and squeak up the duff A bit of how's your father blatant morish char cuppa.!</p>
+                                <p class="f_400 f_size_15 mb-0">Establish, grow, and engage with your audience in meaningful ways with our unique social media system.
+                          Boost your online ranking with our amazing SEO tools.</p>
+									<a href="<?php echo site_url('digital-marketing'); ?>" class="learn_btn">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -303,42 +362,49 @@ and exceed your expectations</p>
             </div>
         </div> -->
 		
-		<section class="agency_testimonial_area bg_color sec_pad">
+		 <section class="agency_testimonial_area bg_color sec_pad">
         <div class="container">
             <h2 class="f_size_30 f_600 t_color3 l_height40 text-center mb_60">We've heard things like</h2>
             <div class="agency_testimonial_info">
                  <div class="testimonial_slider owl-carousel">
+					  <?php 
+						$lastposts = get_posts([
+  'post_type' => 'testmonials',
+  'post_status' => 'publish',
+  'numberposts' => -1,
+   'order'    => 'ASC'
+]);
+						if ( $lastposts ) {
+    foreach ( $lastposts as $post ) :
+        setup_postdata( $post ); ?>
                     <div class="testimonial_item text-center left">
-                        <div class="author_img"><img src="" alt=""></div>
+						
                         <div class="author_description">
-                            <h4 class="f_500 t_color3 f_size_18">Shilpa Patel</h4>
-                            <h6>Founder of Bongos Adventure</h6>
+									<?php if ( has_post_thumbnail()) {
+   $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail');
+			 
+  ?>
+							<div class="customer_img"><img src="<?php echo $large_image_url[0]; ?>"></div>
+                     
+						<?php } ?>
+							
+                            <h4 class="f_500 t_color3 f_size_18"><?php echo the_title(); ?></h4>
+                            <h6><?php echo get_field("job_description"); ?></h6>
                         </div>
-                        <p>Working with WebmobileZ.com has been a really great experience that has taken my online business to a new level. From the moment I contacted their customer support, WebmobileZ service has been assisting me with exceptional services built around result driven campaigns. For anyone looking for a professional team to manage web marketing and PPC, get in touch with WebmobileZ.com because they will save your business time and money with their expertise and know-how. Look forward to doing very long term business! Marketing has paid off, thanks, guys!</p>
+                        <p><?php echo the_content(); ?></p>
                     </div>
-                    <div class="testimonial_item text-center center">
-                        <div class="author_img"><img src="" alt=""></div>
-                        <div class="author_description">
-                            <h4 class="f_500 t_color3 f_size_18">Jennifer Crouch</h4>
-                            <h6>CEO of MoosAngels</h6>
-                        </div>
-                        <p>I've fished several e-commerce platforms and marketplaces that could enter to my business model.The support team was helpful with everything.</p>
-                    </div>
-                    <div class="testimonial_item text-center right">
-                        <div class="author_img"><img src="" alt=""></div>
-                        <div class="author_description">
-                            <h4 class="f_500 t_color3 f_size_18">Hanny</h4>
-                            <h6>Founder of AlphaTechInc</h6>
-                        </div>
-                        <p>I would like to thank WebmobileZ team for the excellent work. The team  works superbly and technical support is very great. I encourage people to do business with this company!</p>
-                    </div>
+                   
+                  <?php 
+                   endforeach; 
+    wp_reset_postdata();
+}
+						?>
                 </div> 
             </div>
         </div>
     </section>
-    
 	
-             <section class="partner_logo_area_five" >
+              <section class="partner_logo_area_five" >
             <div class="container">
                 <h2 class="f_size_30 f_600 text-center t_color l_height45 mb_50"><?php echo get_field("technology_title"); ?></h2>
                 <div class="developer_product_content d_product_content_two text-center p-0">
@@ -415,7 +481,7 @@ and exceed your expectations</p>
                                             ?>
            <li class="tech-icon flex-column align-content-center">
                                         <div>
-                                        <img src=<?php echo esc_url($featured_img_url); ?> alt="">
+                                        <img  class="img-fluid"  src=<?php echo esc_url($featured_img_url); ?> alt="">
                                          <p><?php echo get_the_title();?></p>
                                         </div>
                                     </li>
