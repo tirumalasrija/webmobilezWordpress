@@ -1,34 +1,4 @@
-/*
-Table of Content:
-01/ variables
-02/ predefine
-03/ button
-04/ preloader
-05/ header
-06/ banner
-07/ breadcrumb
-08/ features
-09/ service
-10/ price
-11/ about
-12/ testimonial
-13/ screenshot
-14/ joblist
-15/ faq
-16/ portfolio
-17/ contact
-18/ error
-19/ shop
-20/ blog
-21/ footer
-
-=====================================================================*/
-/*====================================================*/
-/*=== fonts ====*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900");
-/*===== color =====*/
-/*====================================================*/
-/**/
 
 a {
   text-decoration: none;
@@ -3185,9 +3155,10 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 /*============== slider_area css ==============*/
 .slider_area {
-  background-image: -moz-linear-gradient(40deg, #1786d8 0%, #00aff0 100%);
-  background-image: -webkit-linear-gradient(40deg, #1786d8 0%, #00aff0 100%);
-  background-image: -ms-linear-gradient(40deg, #1786d8 0%, #00aff0 100%);
+  /*background-image: -moz-linear-gradient(180deg,#f73603 0%,#ff4413 100%);
+  background-image: -webkit-linear-gradient(180deg,#f73603 0%,#ff4413 100%);
+  background-image: -ms-linear-gradient(180deg,#f73603 0%,#ff4413 100%);*/
+  background-color: #d94c27;
   height: 770px;
   background-size: cover;
   background-position: 50%;
@@ -3218,11 +3189,13 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 .leaf.l_left {
   top: 200px;
   left: 260px;
+  
 }
 
 .leaf.l_right {
   right: 0;
   bottom: 100px;
+ 
 }
 
 .mobile_img {
@@ -4294,7 +4267,9 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 .saas_banner_area_three .slider_item.slider_item_two {
 
-  background-image:-moz-linear-gradient(180deg,#f73603 0%,#ff4413 100%);background-image:-webkit-linear-gradient(180deg,#d94c27 0%,#e06f52 100%)!important;background-image:-ms-linear-gradient(180deg,#f73603 0%,#ff4413 100%);
+  background-image:-moz-linear-gradient(180deg,#f73603 0%,#ff4413 100%);
+  background-image:-webkit-linear-gradient(180deg,#d94c27 0%,#e06f52 100%)!important;
+  background-image:-ms-linear-gradient(180deg,#f73603 0%,#ff4413 100%);
 
 }
 
@@ -5171,11 +5146,11 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 
 .learn_btn:hover {
-  color: #7fcb11;
+   color: #d94c27 !important;
 }
 
 .learn_btn:hover:before {
-  background: #7fcb11;
+   background: #d94c27 !important;
 }
 
 .learn_btn:hover i {
@@ -9322,6 +9297,9 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 .agency_testimonial_info .testimonial_slider .testimonial_item .author_description h4 {
   margin-bottom: 5px;
+  font-weight: normal;
+  font-size: 15px;
+  color: #677294;
 }
 
 .agency_testimonial_info .testimonial_slider .testimonial_item .author_description h6 {
@@ -18798,10 +18776,12 @@ ul.tech_used li{
 
 .author_description {
    display:flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     align-content: center;
     position: relative;
+    text-align: left;
+    justify-content: center;
 }
 	
 .customer_img {
@@ -18810,17 +18790,21 @@ ul.tech_used li{
     width: 60px;
     border-radius: 50%;
     float: left;
-    position: absolute;
-    margin-left: -155px;
-	line-height: 53px;
+   
 }
+  .customer_title {
+    float: left;
+    text-align: left;
+    margin-left: 40px;
+    line-height: 40px;
+    padding-top: 20px;
+    }
 
 .agency_testimonial_info .testimonial_slider .testimonial_item .author_description img {
     border-radius: 50%;
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     border: 1px solid #f2efef;
-    padding: 4px;
 }
 
 /**********************/
@@ -19227,6 +19211,38 @@ ul.tech_used li{
         padding-right: 0px;
     }
 
+    img.women_img {
+    position: absolute;
+}
+
+    .feature_info .feature_img {
+        text-align: center;
+    }
+
+    .feature_info .feature_img.f_img_one img {
+        position: initial;
+    }
+
+    .feature_info .feature_img.f_img_two img {
+       position: initial;
+    }
+
+    .p_service_item h5 {
+      padding-top: 80px;
+    }
+
+    .p_service_item .icon {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+    }
+
+    .p_service_item {
+      text-align: center;
+    }
+
   }
 
 
@@ -19256,3 +19272,33 @@ ul.tech_used li{
     text-align: center!important;
   }
 }
+.textwidget .list-unstyled:hover {
+     color: #677294;
+}
+.textwidget {
+     color: #677294;
+}
+.apply_button{
+   font: 500 14px "Poppins", sans-serif !important;
+    color: #fff !important;
+}
+.menu > .nav-item.submenu .dropdown-menu .nav-item .nav-link
+{
+color:#051441 !important;
+}
+.menu > .nav-item.submenu .dropdown-menu .nav-item .nav-link:hover
+{
+color:#d94c27 !important;
+}
+.agency_testimonial_info .owl-next
+{
+   background: #d94c27;
+
+}
+.agency_testimonial_info .owl-prev, .agency_testimonial_info .owl-next i.ti-angle-left
+{
+   background: #d94c27;
+
+}
+
+

@@ -249,9 +249,10 @@
                 margin:10,
                 items: 1,
                 autoplay: true,
-                smartSpeed: 2500,
+                autoplayHoverPause:true,
                 autoplaySpeed: false,
                 responsiveClass:true,
+                
                 nav: true,
                 dot: true,
                 stagePadding: 0,
@@ -261,6 +262,32 @@
         }
     }
     testimonialSlider();
+    $('.owl-next').on('click', function () {
+        $('.owl-carousel').trigger('stop.owl.autoplay');
+    
+        //simple one (EDIT: not enough to make it work after testing it):
+        //$('.owl-carousel').trigger('changeOption.owl.carousel', { autoplay: false });
+    
+        //or more complicated (will work for one carousel only, or else use 'each'):
+        //EDIT: this one seems to work
+        var carousel = $('.owl-carousel').data('owl.carousel');
+        carousel.settings.autoplay = false; //don't know if both are necessary
+        carousel.options.autoplay = false;
+        $('.owl-carousel').trigger('refresh.owl.carousel');
+    });
+    $('.owl-prev').on('click', function () {
+        $('.owl-carousel').trigger('stop.owl.autoplay');
+    
+        //simple one (EDIT: not enough to make it work after testing it):
+        //$('.owl-carousel').trigger('changeOption.owl.carousel', { autoplay: false });
+    
+        //or more complicated (will work for one carousel only, or else use 'each'):
+        //EDIT: this one seems to work
+        var carousel = $('.owl-carousel').data('owl.carousel');
+        carousel.settings.autoplay = false; //don't know if both are necessary
+        carousel.options.autoplay = false;
+        $('.owl-carousel').trigger('refresh.owl.carousel');
+    });
     /*===========End Service Slider js ===========*/
     
     /*===========Start app_testimonial_slider js ===========*/

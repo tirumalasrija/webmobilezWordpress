@@ -24,7 +24,7 @@
                             <div class="info_item">
                                 <i class="ti-ruler-pencil"></i>
                                 <h6>Department</h6>
-								<p><?php echo get_the_title();  ?></p>
+								<p><?php single_post_title();  ?></p>
                             </div>
                             <div class="info_item">
                                 <i class="ti-location-pin"></i>

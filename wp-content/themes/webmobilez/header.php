@@ -23,45 +23,10 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/vendors/magnify-pop/magnific-popup.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/vendors/nice-select/nice-select.css">
     <!--<link rel="stylesheet" href="vendors/scroll/jquery.mCustomScrollbar.min.css">-->
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style10.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style11.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive8.css">
 	  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-<style>
-	.learn_btn:hover {
-    color: #d94c27 !important;
-}
-	.learn_btn:hover:before {
-    background: #d94c27 !important;
-}
-.textwidget .list-unstyled:hover {
-     color: #677294;
-}
-	.textwidget {
-     color: #677294;
-}
-	.apply_button{
-	    font: 500 14px "Poppins", sans-serif !important;
-    color: #fff !important;
-	}
-	.menu > .nav-item.submenu .dropdown-menu .nav-item .nav-link
-	{
-		color:#051441 !important;
-	}
-	.menu > .nav-item.submenu .dropdown-menu .nav-item .nav-link:hover
-	{
-		color:#d94c27 !important;
-	}
-	.agency_testimonial_info .owl-next
-	{
-		    background: #d94c27;
 
-	}
-	.agency_testimonial_info .owl-prev, .agency_testimonial_info .owl-next i.ti-angle-left
-	{
-		    background: #d94c27;
-		
-	}
-	</style>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
